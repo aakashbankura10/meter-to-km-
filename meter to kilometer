@@ -1,0 +1,22 @@
+import tkinter as tk
+from tkinter import ttk
+def mtokm():
+    x = inputvar.get()
+    y = x/1000
+    outputvar.set(y)
+
+root = tk.Tk()
+root.geometry("300x300")
+firtLable = ttk.Label( master = root, text=" welcome to the meter to km converter", font= " times 30 italic ")
+firtLable.pack()
+mainfram = ttk.Frame(master = root)
+mainfram.pack()
+inputvar = tk.IntVar()
+inputbox = ttk.Entry( master = mainfram, textvariable=inputvar)
+inputbox.pack( side = "left")
+button = ttk.Button( master = mainfram, text = "Button", command= mtokm)
+button.pack( side = "right")
+outputvar = tk.StringVar()
+finalLable = ttk.Label( master=  root, text= " converter value",textvariable= outputvar)
+finalLable.pack()
+root.mainloop()
